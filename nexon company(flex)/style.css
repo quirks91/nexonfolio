@@ -1,0 +1,397 @@
+*{
+  font-family: 'S-Core';
+  font-weight:500;
+}
+body{
+  font-size: 16px;
+  margin:0;
+  color: #222;
+  line-height: 1.5em;
+  font-weight: 400; /* 400(노말) 600(볼드) */
+  outline: none;
+}
+
+/* Reset CSS */
+a{
+  text-decoration:none;
+  color: #222
+}
+h1,h2,h3,h4,h5,h6{
+  margin:0;
+  font-weight: 600;
+  line-height: 1.2em;
+}
+input, button, textarea{
+  outline: none;
+}
+button{
+  cursor: pointer;
+}
+ul{
+  padding:0;
+  margin:0;
+  list-style:none;
+}
+/* Common CSS */
+.inner{
+  width: 1300px;
+  margin: auto;
+}
+/* Header */
+header{
+  position: fixed;
+  width: 100%;
+  transition: 0.5s;
+  top:0;
+  left:0;
+}
+.banner{
+  background-color: black;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+}
+.lnb{
+  width: 1300px;
+  margin: auto;
+  text-align: right;
+}
+.lnb a{
+  color:#ddd;
+  margin-right: 0;
+}
+.lnb a em{
+  color:#bbb
+}
+
+nav{
+  width: 1300px;
+  margin:auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top:20px;
+}
+.gnb{
+  display: flex;
+}
+.gnb li a{
+  margin: 20px;
+  color:#fff;
+}
+.gnb li a:hover{
+  margin: 20px;
+  color: rgb(160, 243, 64);
+}
+.gnb li a:last-child{
+  margin-right: 0;
+}
+
+.trigger{
+  display: none;
+}
+/* Header with active class */
+header.active{
+   background-color: #fff;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+   position: fixed;
+   z-index:4;
+}
+header.active .gnb li a{
+  color:black;
+}
+header.active .gnb li a:hover{
+  color:rgb(76, 159, 197);
+}
+header.active .banner{
+  height: 0;
+  overflow: hidden;
+}
+header.active nav{
+  padding-bottom: 20px;
+}
+.gototop{
+  background-color: rgb(157, 214, 91);
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  right:20px;
+  bottom:-20px;
+  opacity:0;
+  color: white;
+  font-size:30px;
+  text-align:center;
+  line-height: 36px;
+  /* transition: 0.5s; */
+}
+.gototop.active{
+  bottom:20px;
+  opacity: 1;
+}
+
+/* Intro */
+.intro{
+  height: 100vh;
+  background: url(imgs/main.png) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+.intro .heading{
+  color:white;
+  text-align: center;
+}
+.heading h1{
+  font-size: 68px;
+  margin-bottom: 50px;
+  letter-spacing: -5px;
+}
+.heading p{
+  font-size: 20px;
+  line-height: 1.5em;
+  font-weight: 300;
+  letter-spacing: -1px;
+}
+
+
+/* Company Section */
+.company{
+  padding-top:100px;
+  /* margin-top:80px; */
+  margin-bottom:200px;
+}
+.company h1{
+  padding-top: 80px;
+  font-size: 30px;
+  text-align: center;
+  line-height: 40px;
+  color:rgb(76, 159, 197);
+}
+.company p{
+  text-align: center;
+}
+.single-slider div{
+  outline: none;
+  text-align: center;
+}
+.single-slider a{
+  outline: none;
+}
+.single-slider img{
+  margin:auto;
+  padding: 30px 0 10px 0;
+}
+.single-slider h2{
+  padding: 10px;
+}
+.single-slider h2 b{
+  /* border: 1px solid red; */
+  padding-top: 2px;
+  display: block;
+  font-size:16px;
+}
+.single-slider p{
+  margin: auto;
+  text-align: center;
+  width: 800px;
+  padding: 10px;
+}
+/* business */
+
+.business-content{
+  padding-top:100px;
+  display: flex;
+  height: 800px;
+}
+
+.business-content li{
+  /* border-right: 3px solid red; */
+  flex:1;
+  transition:0.5s;
+  position: relative;
+  overflow: hidden;
+}
+.business-content li:last-child{
+  border-right:none;
+}
+.business-content li:nth-child(1){
+  background:url(/imgs/g1.jpg)no-repeat;
+  background-position-x: -200px;
+}
+.business-content li:nth-child(2){
+  background:url(/imgs/g2.jpg)no-repeat;
+  background-size: cover;
+  background-position-x: -100px;
+}
+.business-content li:nth-child(3){
+  background:url(/imgs/g3.jpg)no-repeat;
+}
+.business-content li:nth-child(4){
+  background:url(/imgs/g4.jpg)no-repeat;
+  background-position-x: -500px;
+  background-position-y: -500px;
+}
+.business-content:hover li{
+  flex: 1;
+}
+.business-content li:hover{
+  flex: 2;
+  transition: all 0.3s ease-in-out;
+}
+
+.content{
+  position: absolute;
+  background-color: black;
+  color:white;
+  text-align:center;
+  height: 140px;
+  bottom: -300px;
+  /* transition: 1.5s; */
+  padding: 20px;
+  box-sizing: border-box;
+}
+.business-content li:hover .content{
+  bottom: 0;
+  /* transition-delay: 0.5s; */
+}
+
+
+/* Testimonial */
+.testimonial{
+  padding: 150px 0;
+}
+.testimonial-content{
+  text-align: center;
+}
+.testimonial-content hr{
+  border: none;
+  height: 4px;
+  width: 40px;
+  background-color: red;
+  margin-top: 20px ;
+}
+
+.myslider div{
+  margin-top: -2px;
+  outline: none;
+  font-size: 14px;
+}
+.myslider .comment{
+  padding: 0 20px;
+}
+.client{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline:none;
+}
+
+/* .client img{
+  width: 160px;
+} */
+.myslider img{
+  width: 160px;
+  /* border: 1px solid red; */
+}
+.myslider span{
+  display: block;
+  margin-bottom: 12px;
+  font-size:14px;
+  color:rgb(150, 150, 150);
+}
+.myslider span b{
+  font-size:18px;
+  display: block;
+  color:black;
+  font-weight: 600;
+}
+
+
+/* recruit Section */
+
+.recruit{
+  /* border: 5px solid red; */
+  height: 450px;
+  background: url(/imgs/main3.jpg) no-repeat center center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.recruit:before{
+  content: '';
+  background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.445), rgba(0, 0, 0, 0.425));
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.recruit-heading{
+  text-align: center;
+  position: relative;
+  color: white;
+}
+.recruit-heading h2{
+  font-weight: 300;
+  line-height: 1.4em;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+.recruit-heading b{
+  font-weight: 900;
+}
+.recruit-heading a{
+  background-color: rgba(0, 0, 0, 0.555);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+}
+.recruit-heading a:hover{
+  background-color: red;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+}
+/* Footer */
+footer{
+  background-color: black;
+  padding: 20px 0;
+}
+.footer-content{
+  color:rgb(172, 172, 172);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-content ul{
+  /* border:1px solid white; */
+  text-align: center;
+}
+.footer-content ul li{
+  line-height: 18px;
+}
+.footer-content ul li:first-child{
+  margin-bottom: 10px;
+}
+.footer-content ul li a{
+  color:rgb(138, 138, 138);
+  font-size: 12px;
+}
+.company-us{flex:1;}
+.service{flex:1;}
+.help{flex:2;}
+.help p{
+  color:rgb(138, 138, 138);
+  font-size: 12px;
+}
+.help p a{
+  color:rgb(255, 255, 255);
+  font-size: 12px;
+  text-decoration: underline
+}
+/* Slick.js */
+.slick-dots li button:before{
+  content:  '●';
+}

@@ -1,0 +1,198 @@
+@media (max-width: 768px) {
+
+header {}
+.banner {
+  display: none;
+}
+
+.lnb {
+  width: 100%;
+  text-align: right;
+  /* padding-right: 14px; */
+}
+
+nav {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.gnb {
+  flex-direction: column;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: -240px;
+  width: 240px;
+  height: 100vh;
+  text-align: right;
+  padding-right: 10px;
+  padding-top: 70px;
+  box-sizing: border-box;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.14);
+  transition:0.3s;
+}
+
+.gnb li a {
+  /* border: 1px solid red; */
+  color: #000;
+  display: block;
+  margin: 0;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.gnb.active {
+  right: 0;
+  z-index: 10000;
+}
+
+/* Trigger */
+.trigger {
+  display: block;
+  width: 28px;
+  height: 20px;
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  z-index: 10001;
+}
+
+.trigger span {
+  position: absolute;
+  height: 1px;
+  background-color: black;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.trigger span:nth-child(1) {
+  top: 0;
+}
+
+.trigger span:nth-child(2) {
+  top: 50%;
+}
+
+.trigger span:nth-child(3) {
+  top: 100%;
+}
+
+.trigger.active span {
+  background-color: #000000;
+}
+
+.trigger.active span:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+.trigger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.trigger.active span:nth-child(3) {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+
+p {
+  font-size: 14px;
+  line-height: 1.5em;
+  font-weight: 300;
+  letter-spacing: -1px;
+  display: inline;
+}
+
+/* intro */
+.inner {
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.intro {
+  height: 100vh;
+  background: url(imgs/main.png) no-repeat center center;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro .heading {
+  color: white;
+  text-align: center;
+}
+
+.heading h1 {
+  font-size: 30px;
+  margin-bottom: 50px;
+  letter-spacing: -5px;
+}
+
+.heading p {
+  font-size: 14px;
+  line-height: 1.5em;
+  font-weight: 300;
+  letter-spacing: -1px;
+}
+
+/* COMPANY */
+.company h1 {
+  padding-top: 80px;
+  font-size: 30px;
+  text-align: center;
+  line-height: 40px;
+  color: rgb(76, 159, 197);
+}
+
+/* BUSINESS */
+.business-content:hover li {
+  flex: 1;
+}
+
+.business-content li:nth-child(1) {
+  background: url(/imgs/g1.jpg)no-repeat;
+  background-position-x: -500px;
+}
+
+.business-content li:nth-child(2) {
+  background: url(/imgs/g2.jpg)no-repeat;
+  background-size: cover;
+  background-position-x: -400px;
+}
+
+.business-content li:nth-child(3) {
+  background: url(/imgs/g3.jpg)no-repeat;
+  background-position-x: -200px;
+}
+
+.business-content li:nth-child(4) {
+  background: url(/imgs/g4.jpg)no-repeat;
+  background-position-x: -650px;
+  background-position-y: -500px;
+}
+
+.business-content li:hover {
+  flex: 9;
+  transition: all 0.3s ease-in-out;
+}
+
+/* FOOTER */
+.footer-content {
+  color: rgb(172, 172, 172);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content ul {
+  /* border:1px solid white; */
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.footer-content ul li:first-child {
+  margin-bottom: 8px;
+}
+}
