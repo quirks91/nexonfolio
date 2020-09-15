@@ -161,23 +161,23 @@
   }
 
   .business-content li:nth-child(1) {
-    background: url(/imgs/g1.jpg)no-repeat;
+    background: url(imgs/g1.jpg)no-repeat;
     background-position-x: -500px;
   }
 
   .business-content li:nth-child(2) {
-    background: url(/imgs/g2.jpg)no-repeat;
+    background: url(imgs/g2.jpg)no-repeat;
     background-size: cover;
     background-position-x: -400px;
   }
 
   .business-content li:nth-child(3) {
-    background: url(/imgs/g3.jpg)no-repeat;
+    background: url(imgs/g3.jpg)no-repeat;
     background-position-x: -200px;
   }
 
   .business-content li:nth-child(4) {
-    background: url(/imgs/g4.jpg)no-repeat;
+    background: url(imgs/g4.jpg)no-repeat;
     background-position-x: -650px;
     background-position-y: -500px;
   }
