@@ -217,19 +217,19 @@ header.active nav{
   border-right:none;
 }
 .business-content li:nth-child(1){
-  background:url(/imgs/g1.jpg)no-repeat;
+  background:url(imgs/g1.jpg)no-repeat;
   background-position-x: -200px;
 }
 .business-content li:nth-child(2){
-  background:url(/imgs/g2.jpg)no-repeat;
+  background:url(imgs/g2.jpg)no-repeat;
   background-size: cover;
   background-position-x: -100px;
 }
 .business-content li:nth-child(3){
-  background:url(/imgs/g3.jpg)no-repeat;
+  background:url(imgs/g3.jpg)no-repeat;
 }
 .business-content li:nth-child(4){
-  background:url(/imgs/g4.jpg)no-repeat;
+  background:url(imgs/g4.jpg)no-repeat;
   background-position-x: -500px;
   background-position-y: -500px;
 }
@@ -314,7 +314,7 @@ header.active nav{
 .recruit{
   /* border: 5px solid red; */
   height: 450px;
-  background: url(/imgs/main3.jpg) no-repeat center center;
+  background: url(imgs/main3.jpg) no-repeat center center;
   background-size: cover;
   position: relative;
   display: flex;
